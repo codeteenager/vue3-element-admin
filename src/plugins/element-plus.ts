@@ -4,6 +4,6 @@ import { type App } from 'vue'
 
 export default {
   install (app: App) {
-    app.use(ElementPlus, { size: 'medium', zIndex: 2000 })
+    app.use(ElementPlus)
   }
 }
