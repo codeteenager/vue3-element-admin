@@ -31,9 +31,17 @@ jobs:
         run: npm install && npm run build
 
       - name: Deploy # 步骤3
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages
-          # 部署目录为 VuePress 的默认输出目录
-          FOLDER: ./dist
+        # uses: JamesIves/github-pages-deploy-action@releases/v3
+        # with:
+        #   ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        #   BRANCH: gh-pages
+        #   # 部署目录为 VuePress 的默认输出目录
+        #   FOLDER: ./dist
+        uses: easingthemes/ssh-deploy@v2.1.2
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN }}
+          ARGS: "-avz --delete"
+          SOURCE: "dist/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.TARGET }}
