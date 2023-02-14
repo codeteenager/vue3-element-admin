@@ -39,7 +39,7 @@ jobs:
         #   FOLDER: ./dist
         uses: easingthemes/ssh-deploy@v2.1.2
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN }}
+          SSH_PRIVATE_KEY: ${{ secrets.REMOTE_SSK_KEY }}
           ARGS: "-avz --delete"
           SOURCE: "dist/"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
