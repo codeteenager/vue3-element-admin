@@ -6,11 +6,11 @@ const routes: RouteRecordRaw =
     name: 'product',
     component: RouterView,
     children: [
-      {
-        path: '',
-        name: '',
-        component: async () => await import('')
-      }
+      // {
+      //   path: '',
+      //   name: '',
+      //   component: async () => await import('')
+      // }
     ]
   }
 
