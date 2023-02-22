@@ -4,7 +4,7 @@ import { ILoginInfo } from '@/api/types/common'
 import { onMounted, ref } from 'vue'
 
 // eslint-disable-next-line dot-notation
-const list = ref < ILoginInfo['slide'] > ([])
+const list = ref < ILoginInfo['slide'] >([])
 
 onMounted(() => {
   getLoginInfo().then(data => {
@@ -22,7 +22,6 @@ onMounted(() => {
     <a href="https://vuejs.org/" target="_blank">
       <img src="@/assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
-    {{$store.state.count}}
   </div>
 </template>
 

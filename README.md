@@ -1,4 +1,4 @@
-# Vue 3 + TypeScript + Vite
+# Vue 3 + TypeScript + Vite + Pinia
 
 ## 初始化Git仓库
 ```shell
@@ -21,7 +21,7 @@ git push -u origin master
 │     ├─layout             #页面布局模板
 │     ├─plugins            #插件
 │     ├─router             #路由
-│     ├─store              #Vuex存储
+│     ├─store              #pinia存储
 │     ├─styles             #样式
 │     │  └─spec            #全局通用样式
 │     ├─utils              #工具模块

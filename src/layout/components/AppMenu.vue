@@ -45,9 +45,13 @@ import {
   Location,
   Setting
 } from '@element-plus/icons-vue'
-import { ref } from 'vue'
+import { computed } from 'vue'
+import { useAppStore } from '@/store/modules/app'
 
-const isCollapse = ref(true)
+const appStore = useAppStore()
+
+const isCollapse = computed(() => appStore.sidebar.opened)
+
 </script>
 <style scoped>
 
