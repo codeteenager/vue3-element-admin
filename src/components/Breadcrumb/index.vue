@@ -27,7 +27,7 @@ watch(() => route.path, (path) => {
 
 function getBreadcrumb () {
   // only show routes with meta.title
-  let matched = route.matched.filter(item => item.meta && item.meta.title)
+  let matched: any[] = route.matched.filter(item => item.meta && item.meta.title)
   const first = matched[0]
 
   if (!isDashboard(first)) {
@@ -51,7 +51,7 @@ function isDashboard (route: RouteLocationMatched) {
   if (!name) {
     return false
   }
-  return name.trim().toLocaleLowerCase() === 'Dashboard'.toLocaleLowerCase()
+  return name.toString().trim().toLocaleLowerCase() === 'Dashboard'.toLocaleLowerCase()
 }
 
 function pathCompile (path:string) {
